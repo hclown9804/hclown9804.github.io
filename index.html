@@ -168,6 +168,130 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-set" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/13/set/">set</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/13/set/" class="archive-article-date">
+  	<time datetime="2019-06-13T02:16:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="C-set用法"><a href="#C-set用法" class="headerlink" title="C++ set用法"></a>C++ set用法</h3><ul>
+<li><p>set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。</p>
+</li>
+<li><p>常见操作</p>
+<ul>
+<li>begin() 返回指向第一个元素的迭代器</li>
+<li>clear() 清除所有元素</li>
+<li>count() 返回某个元素的个数</li>
+<li>empty() 如果集合为空，返回true</li>
+<li>end() 返回指向最后一个元素之后的迭代器</li>
+<li>erase() 删除集合中的元素</li>
+<li>find() 返回第一个指向被查找到的元素</li>
+<li>insert() 插入元素</li>
+<li>size() 集合元素数目</li>
+<li>swap() 交换两个元素</li>
+</ul>
+</li>
+<li><p>样例</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg" alt="pic"></p>
+</li>
+</ul>
+<h3 id="C-multiset用法"><a href="#C-multiset用法" class="headerlink" title="C++ multiset用法"></a>C++ multiset用法</h3><ul>
+<li><p>set中不允许有重复元素，multiset中允许有重复元素</p>
+</li>
+<li><p>样例</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zc4ahy7bj30li0aowez.jpg" alt="pic1"></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">set</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/13/set/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-pair" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -511,6 +635,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">set</a>
               </li>
              
               <li class="article-tag-list-item">
