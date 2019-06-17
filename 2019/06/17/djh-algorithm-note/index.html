@@ -96,21 +96,18 @@
 
 
 
-  <meta name="description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
-<meta name="keywords" content="STL,C++,set">
+  <meta name="description" content="邓俊辉算法训练营笔记week 1 首先找到数组中最小的那个元素，其次将它和数组的第一个元素交换位置(如果第一个元素就是最小的元素那么它就和自己交换)。再次,在剩余的元素中需要最小的元素，让它与数组的第二个元素交换位置。重复操作直到整个数组排序。选择排序的核心在于：不断的选择剩余元素中的最小者。 插入排序将一个待排序的记录，按照其关键字的大小将其插入到前边已经排好序的子序列的适当的位置，直到全部插入">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="set">
-<meta property="og:url" content="http://yoursite.com/2019/06/13/set/index.html">
+<meta property="og:title" content="djh_algorithm_note">
+<meta property="og:url" content="http://yoursite.com/2019/06/17/djh-algorithm-note/index.html">
 <meta property="og:site_name" content="Clown">
-<meta property="og:description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
+<meta property="og:description" content="邓俊辉算法训练营笔记week 1 首先找到数组中最小的那个元素，其次将它和数组的第一个元素交换位置(如果第一个元素就是最小的元素那么它就和自己交换)。再次,在剩余的元素中需要最小的元素，让它与数组的第二个元素交换位置。重复操作直到整个数组排序。选择排序的核心在于：不断的选择剩余元素中的最小者。 插入排序将一个待排序的记录，按照其关键字的大小将其插入到前边已经排好序的子序列的适当的位置，直到全部插入">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg">
-<meta property="og:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zc4ahy7bj30li0aowez.jpg">
-<meta property="og:updated_time" content="2019-06-13T04:39:26.778Z">
+<meta property="og:updated_time" content="2019-06-17T09:16:30.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="set">
-<meta name="twitter:description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
-<meta name="twitter:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg">
+<meta name="twitter:title" content="djh_algorithm_note">
+<meta name="twitter:description" content="邓俊辉算法训练营笔记week 1 首先找到数组中最小的那个元素，其次将它和数组的第一个元素交换位置(如果第一个元素就是最小的元素那么它就和自己交换)。再次,在剩余的元素中需要最小的元素，让它与数组的第二个元素交换位置。重复操作直到整个数组排序。选择排序的核心在于：不断的选择剩余元素中的最小者。 插入排序将一个待排序的记录，按照其关键字的大小将其插入到前边已经排好序的子序列的适当的位置，直到全部插入">
 
 
 
@@ -118,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/13/set/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/17/djh-algorithm-note/">
 
 
 
@@ -128,7 +125,7 @@
   };
 </script>
 
-  <title>set | Clown</title>
+  <title>djh_algorithm_note | Clown</title>
   
 
 
@@ -297,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/set/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/djh-algorithm-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Clown">
@@ -314,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">set
+          <h1 class="post-title" itemprop="name headline">djh_algorithm_note
 
               
             
@@ -340,7 +337,7 @@
                 
               
 
-              <time title="Created: 2019-06-13 10:16:45 / Modified: 12:39:26" itemprop="dateCreated datePublished" datetime="2019-06-13T10:16:45+08:00">2019-06-13</time>
+              <time title="Created: 2019-06-17 10:28:39 / Modified: 17:16:30" itemprop="dateCreated datePublished" datetime="2019-06-17T10:28:39+08:00">2019-06-17</time>
             
 
             
@@ -362,7 +359,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -397,39 +394,13 @@
       
 
       
-        <h3 id="C-set用法"><a href="#C-set用法" class="headerlink" title="C++ set用法"></a>C++ set用法</h3><ul>
-<li><p>set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。</p>
-<a id="more"></a>
-</li>
-<li><p>常见操作</p>
-<ul>
-<li>begin() 返回指向第一个元素的迭代器</li>
-<li>clear() 清除所有元素</li>
-<li>count() 返回某个元素的个数</li>
-<li>empty() 如果集合为空，返回true</li>
-<li>end() 返回指向最后一个元素之后的迭代器</li>
-<li>erase() 删除集合中的元素</li>
-<li>find() 返回第一个指向被查找到的元素</li>
-<li>insert() 插入元素</li>
-<li>size() 集合元素数目</li>
-<li>swap() 交换两个元素</li>
-</ul>
-</li>
-<li><p>样例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg" alt="pic"></p>
-</li>
-</ul>
-<h3 id="C-multiset用法"><a href="#C-multiset用法" class="headerlink" title="C++ multiset用法"></a>C++ multiset用法</h3><ul>
-<li><p>set中不允许有重复元素，multiset中允许有重复元素</p>
-</li>
-<li><p>样例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zc4ahy7bj30li0aowez.jpg" alt="pic1"></p>
-</li>
-</ul>
+        <h3 id="邓俊辉算法训练营笔记"><a href="#邓俊辉算法训练营笔记" class="headerlink" title="邓俊辉算法训练营笔记"></a>邓俊辉算法训练营笔记</h3><h4 id="week-1"><a href="#week-1" class="headerlink" title="week 1"></a>week 1</h4><ol>
+<li>首先找到数组中最小的那个元素，其次将它和数组的第一个元素交换位置(如果第一个元素就是最小的元素那么它就和自己交换)。再次,在剩余的元素中需要最小的元素，让它与数组的第二个元素交换位置。重复操作直到整个数组排序。选择排序的核心在于：不断的选择剩余元素中的最小者。</li>
+<li>插入排序将一个待排序的记录，按照其关键字的大小将其插入到前边已经排好序的子序列的适当的位置，直到全部插入完毕。为了给要插入的元素腾出位置，需要将其余所有元素在插入位置之前都向右移动一位。</li>
+<li>插入排序的效率取决与序列中逆序对的个数且具有输入敏感性，算法的效率与输入数据有关。</li>
+<li>选择排序—&gt;online；选择排序—&gt;offline。</li>
+<li></li>
+</ol>
 
       
     </div>
@@ -456,11 +427,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
-          
-            <a href="/tags/C/" rel="tag"># C++</a>
-          
-            <a href="/tags/set/" rel="tag"># set</a>
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -473,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/pair/" rel="next" title="pair">
-                <i class="fa fa-chevron-left"></i> pair
+              <a href="/2019/06/13/effective-stl/" rel="next" title="effective_stl">
+                <i class="fa fa-chevron-left"></i> effective_stl
               </a>
             
           </div>
@@ -482,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/13/effective-stl/" rel="prev" title="effective_stl">
-                effective_stl <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -646,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-set用法"><span class="nav-number">1.</span> <span class="nav-text">C++ set用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-multiset用法"><span class="nav-number">2.</span> <span class="nav-text">C++ multiset用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#邓俊辉算法训练营笔记"><span class="nav-number">1.</span> <span class="nav-text">邓俊辉算法训练营笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#week-1"><span class="nav-number">1.1.</span> <span class="nav-text">week 1</span></a></li></ol></li></ol></div>
             
 
           </div>

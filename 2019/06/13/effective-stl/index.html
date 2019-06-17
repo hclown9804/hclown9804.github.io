@@ -96,21 +96,18 @@
 
 
 
-  <meta name="description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
-<meta name="keywords" content="STL,C++,set">
+  <meta name="description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
+<meta name="keywords" content="STL,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="set">
-<meta property="og:url" content="http://yoursite.com/2019/06/13/set/index.html">
+<meta property="og:title" content="effective_stl">
+<meta property="og:url" content="http://yoursite.com/2019/06/13/effective-stl/index.html">
 <meta property="og:site_name" content="Clown">
-<meta property="og:description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
+<meta property="og:description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg">
-<meta property="og:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zc4ahy7bj30li0aowez.jpg">
-<meta property="og:updated_time" content="2019-06-13T04:39:26.778Z">
+<meta property="og:updated_time" content="2019-06-14T01:10:41.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="set">
-<meta name="twitter:description" content="C++ set用法 set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。">
-<meta name="twitter:image" content="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg">
+<meta name="twitter:title" content="effective_stl">
+<meta name="twitter:description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
 
 
 
@@ -118,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/13/set/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/13/effective-stl/">
 
 
 
@@ -128,7 +125,7 @@
   };
 </script>
 
-  <title>set | Clown</title>
+  <title>effective_stl | Clown</title>
   
 
 
@@ -297,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/set/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/effective-stl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Clown">
@@ -314,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">set
+          <h1 class="post-title" itemprop="name headline">effective_stl
 
               
             
@@ -340,12 +337,24 @@
                 
               
 
-              <time title="Created: 2019-06-13 10:16:45 / Modified: 12:39:26" itemprop="dateCreated datePublished" datetime="2019-06-13T10:16:45+08:00">2019-06-13</time>
+              <time title="Created: 2019-06-13 14:51:25" itemprop="dateCreated datePublished" datetime="2019-06-13T14:51:25+08:00">2019-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-14 09:10:41" itemprop="dateModified" datetime="2019-06-14T09:10:41+08:00">2019-06-14</time>
               
             
           </span>
@@ -362,7 +371,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/阅读/" itemprop="url" rel="index"><span itemprop="name">阅读</span></a></span>
 
                 
                 
@@ -397,38 +406,25 @@
       
 
       
-        <h3 id="C-set用法"><a href="#C-set用法" class="headerlink" title="C++ set用法"></a>C++ set用法</h3><ul>
-<li><p>set集合是实现了红黑树的平衡二叉树的数据结构，自动调整二叉树的排列，把元素放到合适的位置，即按照一定顺序排列。</p>
-<a id="more"></a>
-</li>
-<li><p>常见操作</p>
+        <h3 id="Effective-STL"><a href="#Effective-STL" class="headerlink" title="Effective STL"></a>Effective STL</h3><p>#####1、慎重选择容器类型</p>
 <ul>
-<li>begin() 返回指向第一个元素的迭代器</li>
-<li>clear() 清除所有元素</li>
-<li>count() 返回某个元素的个数</li>
-<li>empty() 如果集合为空，返回true</li>
-<li>end() 返回指向最后一个元素之后的迭代器</li>
-<li>erase() 删除集合中的元素</li>
-<li>find() 返回第一个指向被查找到的元素</li>
-<li>insert() 插入元素</li>
-<li>size() 集合元素数目</li>
-<li>swap() 交换两个元素</li>
+<li>标准STL序列容器：vector、string、deque、list；</li>
+<li>标准STL关联容器：set、multiset、map、multimap；</li>
+<li>非标准序列容器：slist、rope；</li>
+<li>非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap；</li>
+<li>vector<char>作为string的替代；</char></li>
+<li>vector作为标准关联容器的替代；</li>
+<li>几种标准的非STL容器：数组、bitset、valarray、stack、queue、priority_queue。</li>
 </ul>
-</li>
-<li><p>样例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zbrmyxv9j30ms0a2wez.jpg" alt="pic"></p>
-</li>
+<h5 id="2、不要试图编写独立于容器类型的代码"><a href="#2、不要试图编写独立于容器类型的代码" class="headerlink" title="2、不要试图编写独立于容器类型的代码"></a>2、不要试图编写独立于容器类型的代码</h5><h5 id="3、确保容器中的对象拷贝正确而高效"><a href="#3、确保容器中的对象拷贝正确而高效" class="headerlink" title="3、确保容器中的对象拷贝正确而高效"></a>3、确保容器中的对象拷贝正确而高效</h5><h5 id="4、调用empty而不是检查size-是否为0"><a href="#4、调用empty而不是检查size-是否为0" class="headerlink" title="4、调用empty而不是检查size()是否为0"></a>4、调用empty而不是检查size()是否为0</h5><ul>
+<li>empty对所有的标准容器都是常数时间操作，而对一些list实现size耗费线性时间。</li>
 </ul>
-<h3 id="C-multiset用法"><a href="#C-multiset用法" class="headerlink" title="C++ multiset用法"></a>C++ multiset用法</h3><ul>
-<li><p>set中不允许有重复元素，multiset中允许有重复元素</p>
+<p>#####5、区间成员函数优先于与之对应的单元素成员函数</p>
+<ul>
+<li><p>给定两个vector v1和v2，使v1的内容和v2的后半部分相同的最简单操作:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v1.assign(v2.begin() + v2.size() / <span class="number">2</span>, v2.end());</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>样例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">    s.insert(<span class="number">2</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line">    s.insert(<span class="number">3</span>);</span><br><span class="line">    s.insert(<span class="number">4</span>);</span><br><span class="line">    s.insert(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s.size: "</span> &lt;&lt; s.size() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">multiset</span>&lt;<span class="keyword">int</span>&gt;::iterator it = s.begin(); it != s.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://tva1.sinaimg.cn/large/0060lm7Tly1g3zc4ahy7bj30li0aowez.jpg" alt="pic1"></p>
-</li>
+<li></li>
 </ul>
 
       
@@ -460,8 +456,6 @@
           
             <a href="/tags/C/" rel="tag"># C++</a>
           
-            <a href="/tags/set/" rel="tag"># set</a>
-          
         </div>
       
 
@@ -473,8 +467,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/pair/" rel="next" title="pair">
-                <i class="fa fa-chevron-left"></i> pair
+              <a href="/2019/06/13/set/" rel="next" title="set">
+                <i class="fa fa-chevron-left"></i> set
               </a>
             
           </div>
@@ -483,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/13/effective-stl/" rel="prev" title="effective_stl">
-                effective_stl <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/17/djh-algorithm-note/" rel="prev" title="djh_algorithm_note">
+                djh_algorithm_note <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-set用法"><span class="nav-number">1.</span> <span class="nav-text">C++ set用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-multiset用法"><span class="nav-number">2.</span> <span class="nav-text">C++ multiset用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Effective-STL"><span class="nav-number">1.</span> <span class="nav-text">Effective STL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2、不要试图编写独立于容器类型的代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">2、不要试图编写独立于容器类型的代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、确保容器中的对象拷贝正确而高效"><span class="nav-number">1.0.2.</span> <span class="nav-text">3、确保容器中的对象拷贝正确而高效</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、调用empty而不是检查size-是否为0"><span class="nav-number">1.0.3.</span> <span class="nav-text">4、调用empty而不是检查size()是否为0</span></a></li></ol></li></ol></div>
             
 
           </div>
