@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
-<meta name="keywords" content="C++,STL">
+  <meta name="description" content="C++中字符串切割123456789101112131415161718192021222324252627282930#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;stri">
+<meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="effective_stl">
-<meta property="og:url" content="http://yoursite.com/2019/06/13/effective-stl/index.html">
+<meta property="og:title" content="c++_split">
+<meta property="og:url" content="http://yoursite.com/2019/06/27/c-split/index.html">
 <meta property="og:site_name" content="Clown">
-<meta property="og:description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
+<meta property="og:description" content="C++中字符串切割123456789101112131415161718192021222324252627282930#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;stri">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-14T01:10:41.578Z">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g4fsfizrrdj30wc0iemxz.jpg">
+<meta property="og:updated_time" content="2019-06-27T08:21:23.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="effective_stl">
-<meta name="twitter:description" content="Effective STL#####1、慎重选择容器类型  标准STL序列容器：vector、string、deque、list； 标准STL关联容器：set、multiset、map、multimap； 非标准序列容器：slist、rope； 非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap； vector作为string的替代； vec">
+<meta name="twitter:title" content="c++_split">
+<meta name="twitter:description" content="C++中字符串切割123456789101112131415161718192021222324252627282930#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;stri">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g4fsfizrrdj30wc0iemxz.jpg">
 
 
 
@@ -115,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/13/effective-stl/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/27/c-split/">
 
 
 
@@ -125,7 +127,7 @@
   };
 </script>
 
-  <title>effective_stl | Clown</title>
+  <title>c++_split | Clown</title>
   
 
 
@@ -294,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/effective-stl/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/c-split/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Clown">
@@ -311,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">effective_stl
+          <h1 class="post-title" itemprop="name headline">c++_split
 
               
             
@@ -337,24 +339,12 @@
                 
               
 
-              <time title="Created: 2019-06-13 14:51:25" itemprop="dateCreated datePublished" datetime="2019-06-13T14:51:25+08:00">2019-06-13</time>
+              <time title="Created: 2019-06-27 16:16:01 / Modified: 16:21:23" itemprop="dateCreated datePublished" datetime="2019-06-27T16:16:01+08:00">2019-06-27</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-06-14 09:10:41" itemprop="dateModified" datetime="2019-06-14T09:10:41+08:00">2019-06-14</time>
               
             
           </span>
@@ -371,7 +361,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/阅读/" itemprop="url" rel="index"><span itemprop="name">阅读</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C-技巧/" itemprop="url" rel="index"><span itemprop="name">C++技巧</span></a></span>
 
                 
                 
@@ -406,26 +396,9 @@
       
 
       
-        <h3 id="Effective-STL"><a href="#Effective-STL" class="headerlink" title="Effective STL"></a>Effective STL</h3><p>#####1、慎重选择容器类型</p>
-<ul>
-<li>标准STL序列容器：vector、string、deque、list；</li>
-<li>标准STL关联容器：set、multiset、map、multimap；</li>
-<li>非标准序列容器：slist、rope；</li>
-<li>非标准关联容器：hash_set、hash_multiset、hash_map、hash_multimap；</li>
-<li>vector<char>作为string的替代；</char></li>
-<li>vector作为标准关联容器的替代；</li>
-<li>几种标准的非STL容器：数组、bitset、valarray、stack、queue、priority_queue。</li>
-</ul>
-<h5 id="2、不要试图编写独立于容器类型的代码"><a href="#2、不要试图编写独立于容器类型的代码" class="headerlink" title="2、不要试图编写独立于容器类型的代码"></a>2、不要试图编写独立于容器类型的代码</h5><h5 id="3、确保容器中的对象拷贝正确而高效"><a href="#3、确保容器中的对象拷贝正确而高效" class="headerlink" title="3、确保容器中的对象拷贝正确而高效"></a>3、确保容器中的对象拷贝正确而高效</h5><h5 id="4、调用empty而不是检查size-是否为0"><a href="#4、调用empty而不是检查size-是否为0" class="headerlink" title="4、调用empty而不是检查size()是否为0"></a>4、调用empty而不是检查size()是否为0</h5><ul>
-<li>empty对所有的标准容器都是常数时间操作，而对一些list实现size耗费线性时间。</li>
-</ul>
-<p>#####5、区间成员函数优先于与之对应的单元素成员函数</p>
-<ul>
-<li><p>给定两个vector v1和v2，使v1的内容和v2的后半部分相同的最简单操作:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v1.assign(v2.begin() + v2.size() / <span class="number">2</span>, v2.end());</span><br></pre></td></tr></table></figure>
-</li>
-<li></li>
-</ul>
+        <h3 id="C-中字符串切割"><a href="#C-中字符串切割" class="headerlink" title="C++中字符串切割"></a>C++中字符串切割</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span>::size_type position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">string</span> str = <span class="string">"/clown9804/desktop/1.png/"</span>;</span><br><span class="line">    position = str.find(<span class="string">"/"</span>);</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">    <span class="keyword">while</span> (position != str.npos) &#123;</span><br><span class="line">        <span class="built_in">string</span> tmp = str.substr(<span class="number">0</span>, position);</span><br><span class="line">        <span class="keyword">if</span> (tmp.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            res.push_back(tmp);</span><br><span class="line">        &#125;</span><br><span class="line">        str = str.substr(position + <span class="number">1</span>, str.size());</span><br><span class="line">        position = str.find(<span class="string">"/"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;::iterator it = res.begin(); it != res.end(); it++) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g4fsfizrrdj30wc0iemxz.jpg" alt="结果"></p>
 
       
     </div>
@@ -454,8 +427,6 @@
           
             <a href="/tags/C/" rel="tag"># C++</a>
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
-          
         </div>
       
 
@@ -467,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/13/set/" rel="next" title="set">
-                <i class="fa fa-chevron-left"></i> set
+              <a href="/2019/06/21/django-port/" rel="next" title="django_port">
+                <i class="fa fa-chevron-left"></i> django_port
               </a>
             
           </div>
@@ -476,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/17/djh-algorithm-note/" rel="prev" title="djh_algorithm_note">
-                djh_algorithm_note <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -646,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Effective-STL"><span class="nav-number">1.</span> <span class="nav-text">Effective STL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2、不要试图编写独立于容器类型的代码"><span class="nav-number">1.0.1.</span> <span class="nav-text">2、不要试图编写独立于容器类型的代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、确保容器中的对象拷贝正确而高效"><span class="nav-number">1.0.2.</span> <span class="nav-text">3、确保容器中的对象拷贝正确而高效</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、调用empty而不是检查size-是否为0"><span class="nav-number">1.0.3.</span> <span class="nav-text">4、调用empty而不是检查size()是否为0</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-中字符串切割"><span class="nav-number">1.</span> <span class="nav-text">C++中字符串切割</span></a></li></ol></div>
             
 
           </div>
